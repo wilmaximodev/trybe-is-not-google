@@ -7,6 +7,7 @@ priority_2 = {"nome_do_arquivo": "priority_2.txt", "qtd_linhas": 1}
 low_priority = {"nome_do_arquivo": "low_priority.txt", "qtd_linhas": 10}
 low_priority_2 = {"nome_do_arquivo": "low_priority_2.txt", "qtd_linhas": 6}
 
+
 def test_basic_priority_queueing():
     # Cria uma instância da PriorityQueue
     queue = PriorityQueue()
@@ -19,8 +20,6 @@ def test_basic_priority_queueing():
 
     # Verifica o tamanho da fila após a enfileiração
     assert len(queue) == 4
-
-    # Verifica se o dequeue retorna o texto com a maior prioridade (menor quantidade de linhas)
     assert queue.dequeue() == priority
 
     # Verifica se a busca retorna os textos restantes nas posições corretas
@@ -31,4 +30,3 @@ def test_basic_priority_queueing():
     # Verifica se buscar um índice além do tamanho da fila gera um IndexError
     with pytest.raises(IndexError):
         queue.search(3)
-
