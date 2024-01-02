@@ -4,7 +4,7 @@ import sys
 def txt_importer(path_file):
     # Verifica se o arquivo possui a extensão .txt
     if not path_file.endswith('.txt'):
-        print("Formato inválido. O arquivo deve ter extensão .txt",
+        print("Formato inválido",
               file=sys.stderr)
         return []
 
